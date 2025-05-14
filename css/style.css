@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(54, 47, 54);
+    z-index: 3;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hideloader {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+}
+
+.lds-ripple {
+    color: rgb(155, 144, 154)
+}
+
+.lds-ripple,
+.lds-ripple div {
+    box-sizing: border-box;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid currentColor;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 8px;
+        height: 8px;
+        opacity: 0;
+    }
+
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 8px;
+        height: 8px;
+        opacity: 0;
+    }
+
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 8px;
+        height: 8px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+    }
+}
+
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+.cover-container {
+    position: relative;
+    height: 100vh;
+    z-index: 2;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23, 22, 22);
+    opacity: .6;
+    mix-blend-mode: overlay;
+}
+
+.menu-btn {
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+}
+
+.menu-icon {
+    /* fill: white; */
+    transition: transform 0.3s ease-in-out;
+}
+
+.line {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-btn.active .top {
+    transform: translateY(-5px) translateX(5px) rotate(40deg);
+}
+
+.menu-btn.active .middle {
+    opacity: 0;
+}
+
+.menu-btn.active .bottom {
+    transform: translateY(20px) translateX(-40px) rotate(-45deg);
+}
+
+header {
+    position: absolute;
+    width: 100%;
+}
+
+header.active {
+    /* background: rgba(35, 21, 42, 0.5); */
+    background: rgba(54, 47, 54, 0.5);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 95%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    z-index: 5 !important;
+    
+}
+
+.nav-item a.nav-link:hover {
+    background-color: rgba(108, 101, 107, 0.8);
+    margin: 2px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#contenido {
+    margin-top: 15vw;
+
+}
+
+.lead a:hover {
+    background-color: rgba(108, 101, 107, 0.8);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+
+/* @media screen and (max-width: 1700px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+} */
+ /* Esto ayuda a mejorar la interfaz de usuario */
+@media screen and (max-width: 770px) {
+    .navegacion {
+        justify-content: space-between !important;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .pie-pagina {
+        /* align-items: center; */
+        justify-content: center !important;
+    }
+
+    h1 {
+        font-size: x-large !important;
+    }
+
+    p.lead {
+        font-size: medium !important;
+    }
+
+    a.btn {
+        font-size: medium !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #contenido {
+        margin-top: 30vw;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .pie-pagina {
+        position: relative;
+        background: rgba(54, 47, 54, 0.5);
+        margin: 0 !important;
+    }
+
+    #contenido {
+        padding: 1rem !important;
+
+    }
+}
+
+@media screen and (max-height: 600px) {
+
+    .container {
+        padding: .5rem 1rem 0rem 1rem !important;
+    }
+
+    #contenido {
+        margin-top: 5vw !important;
+    }
+
+    .icono {
+        font-size: medium !important;
+    }
+    header.active {
+        font-size: small;
+    }
+
+    h1 {
+        font-size: medium !important;
+    }
+
+    p.lead {
+        font-size: small !important;
+    }
+
+    a.btn {
+        font-size: small !important;
+    }
+
+    button svg {
+        width: 15px;
+        height: 15px;
+    }
+    li svg {
+        width: 15px;
+        height: 15px;
+    }
+    footer div span {
+        font-size: smaller;
+    }
+
+}

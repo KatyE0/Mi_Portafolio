@@ -1,0 +1,27 @@
+body {
+    background-image: url(../sources/background_gradient.png);
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+}
+
+header {
+    position: static;
+}
+header.active {
+    position: static;
+}
+main {
+    margin-bottom: 10vh;
+}
+footer {
+    background: rgb(35, 35, 35);
+}
+.btn_inicio {
+    background: rgb(36, 23, 37);
+    color: white;
+}
+.btn_inicio:hover {
+    border: solid 1px white;
+    background: rgb(36, 23, 37);
+}
