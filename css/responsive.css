@@ -1,0 +1,95 @@
+/* @media screen and (max-width: 1700px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+} */
+ /* Esto ayuda a mejorar la interfaz de usuario */
+@media screen and (max-width: 770px) {
+    .navegacion {
+        justify-content: space-between !important;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .pie-pagina {
+        /* align-items: center; */
+        justify-content: center !important;
+    }
+
+    h1 {
+        font-size: x-large !important;
+    }
+
+    p.lead {
+        font-size: medium !important;
+    }
+
+    a.btn {
+        font-size: medium !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #contenido {
+        margin-top: 30vw;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .pie-pagina {
+        position: relative;
+        background: rgba(54, 47, 54, 0.5);
+        margin: 0 !important;
+    }
+
+    #contenido {
+        padding: 1rem !important;
+
+    }
+}
+
+@media screen and (max-height: 600px) {
+
+    .container {
+        padding: .5rem 1rem 0rem 1rem !important;
+    }
+
+    #contenido {
+        margin-top: 5vw !important;
+    }
+
+    .icono {
+        font-size: medium !important;
+    }
+    header.active {
+        font-size: small;
+    }
+
+    h1 {
+        font-size: medium !important;
+    }
+
+    p.lead {
+        font-size: small !important;
+    }
+
+    a.btn {
+        font-size: small !important;
+    }
+
+    button svg {
+        width: 15px;
+        height: 15px;
+    }
+    li svg {
+        width: 15px;
+        height: 15px;
+    }
+    footer div span {
+        font-size: smaller;
+    }
+
+}

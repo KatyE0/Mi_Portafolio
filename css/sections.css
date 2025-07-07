@@ -1,8 +1,14 @@
-body {
+.background-imagen {
+    background-color: black;
     background-image: url(../sources/background_gradient.png);
     background-size: cover;
     background-repeat: no-repeat;  
-    background-attachment: fixed;  
+    background-attachment: fixed; 
+    filter: blur(3px) brightness(.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 header {
@@ -15,10 +21,10 @@ main {
     margin-bottom: 10vh;
 }
 footer {
-    background: rgb(35, 35, 35);
+    background: rgb(66, 66, 66);
 }
 .btn_inicio {
-    background: rgb(36, 23, 37);
+    background: rgb(91, 50, 94);
     color: white;
 }
 .btn_inicio:hover {

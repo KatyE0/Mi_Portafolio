@@ -1,8 +1,43 @@
 
-div#tarjeta .card {
+body{
+    background-color: #391B49;
+    /* background-image: url(../sources/background_gradient.png); */
+    /* opacity: .5; */
+}
+/* 
+.background-imagen {
+    position: fixed;
+
+} */
+
+a#btn-proyecto{
+    /* background-color: red; */
+    padding: .5rem;
+    margin: .5rem;
+    border: #391B49 solid 1px;
+    background-color: #391B49;
+    /* transition: all .5s ease-in; */
+
+}
+
+a#btn-proyecto:hover {
+    transition: all .3s ease-in;
+    background-color: #642d82;
+}
+
+div#tarjeta {
     background: #391B49;
     background: radial-gradient(circle,rgba(57, 27, 73, 1) 0%, rgba(121, 86, 144, 1) 100%);
     padding: .5rem;
     margin: 1rem;
 
+}
+
+.card-body {
+    background-color: #c5b0d0;
+
+}
+
+.row {
+  justify-content: center;
 }
