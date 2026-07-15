@@ -1,0 +1,31 @@
+/* fuentes */
+h1,
+h2,
+h3,
+h4,
+p
+{
+  color: var(--text);
+}
+h1 {
+    font-weight: 600;
+}
+p{
+  text-align: center;
+}
+span {
+    color: aliceblue;
+}
+
+section:target {
+    scroll-margin-top: 5rem;
+}
+
+/* botones */
+.btn {
+  border: solid 1px #fff ;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+
+}
