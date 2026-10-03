@@ -10,12 +10,12 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <link rel="shortcut icon" href="sources/icono.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='sources/icono.ico') }}" type="image/x-icon">
 
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style-sections.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/font.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style-sections.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/responsive.css') }}">
 
 </head>
 
@@ -55,7 +55,7 @@
         
         <!-- Código para el video de fondo -->
         <video muted autoplay loop>
-            <source src="./sources/background_video.mp4" type="video/mp4">
+            <source src="{{ url_for('static', filename='./sources/background_video.mp4') }}" type="video/mp4">
         </video>
         <div class="capa"></div>
 
@@ -70,7 +70,7 @@
             <section class="card-container">
                 <article class="card">
                     <div class="card-imagen">
-                        <img src="sources/proyectos/spa.png" alt="Proyecto_1" width="100%" height="100%">
+                        <img src="{{ url_for('static', filename='./sources/proyectos/spa.png') }}" alt="Proyecto_1" width="100%" height="100%">
                     </div>
                     <div class="card-body">
                         <h3>"Spa Vitalia" - Sitio web para centro de relajación</h3>
@@ -98,7 +98,7 @@
                 </article>
                 <article class="card">
                     <div class="card-imagen">
-                        <img src="sources/background_no_imagen.webp" alt="Proyecto_1" width="100%" height="100%">
+                        <img src="{{ url_for('static', filename='sources/background_no_imagen.webp') }}" alt="Proyecto_1" width="100%" height="100%">
                     </div>
                     <div class="card-body">
                         <h3>"Lorem ipsum" dolor sit amet, consectetur adipiscing elit.</h3>
@@ -126,7 +126,7 @@
                 </article>
                 <article class="card">
                     <div class="card-imagen">
-                        <img src="sources/background_no_imagen.webp" alt="Proyecto_1" width="100%" height="100%">
+                        <img src="{{ url_for('static', filename='sources/background_no_imagen.webp') }}" alt="Proyecto_1" width="100%" height="100%">
                     </div>
                     <div class="card-body">
                         <h3>"Lorem ipsum" dolor sit amet, consectetur adipiscing elit.</h3>
@@ -154,7 +154,7 @@
                 </article>
                 <article class="card">
                     <div class="card-imagen">
-                        <img src="sources/background_no_imagen.webp" alt="Proyecto_1" width="100%" height="100%">
+                        <img src="{{ url_for('static', filename='sources/background_no_imagen.webp') }}" alt="Proyecto_1" width="100%" height="100%">
                     </div>
                     <div class="card-body">
                         <h3>"Lorem ipsum" dolor sit amet, consectetur adipiscing elit.</h3>
@@ -205,7 +205,7 @@
 
                 <div class="card-carrusel">
                     <section class="carrusel-img">
-                        <img src="sources/background_no_imagen.webp" alt="" srcset="">
+                        <img src="{{ url_for('static', filename='sources/background_no_imagen.webp') }}" alt="" srcset="">
                     </section>
                     <section class="carrusel-text">
                         <!-- <h4></h4>
@@ -238,12 +238,12 @@
         <section id="contacto">
             <h2>Contacto</h2>
 
-            <form class="form-contacto" action="" method="get">
+            <form class="form-contacto" id="formContacto" action="/contacto" method="POST">
                 <div class="campos">
-                    <input type="text" name="Nombre" id="" placeholder="Nombre:">
-                    <input type="email" name="Email" id="" placeholder="Correo electronico:">
-                    <input type="tel" placeholder="Telefono:">
-                    <textarea placeholder="Mensaje" name="" id="" cols="" rows="10"></textarea>
+                    <input type="text" name="nombre" id="" placeholder="Nombre:" required>
+                    <input type="email" name="email" id="" placeholder="Correo electronico:" required>
+                    <input type="tel" name="telefono" placeholder=" Telefono:">
+                    <textarea placeholder="Mensaje" name="mensaje" cols="" rows="10" required></textarea>
                 </div>
                 <div class="">
 
@@ -288,7 +288,7 @@
         </ul>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 </html>

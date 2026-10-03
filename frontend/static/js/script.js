@@ -29,6 +29,7 @@ window.addEventListener('scroll', function() {
     // });
 
 // Datos del carrusel
+
 const data = [
 
     {
@@ -82,3 +83,43 @@ btnPrev.addEventListener("click", (e) => {
     actualizarCarrusel();
 });
 
+
+//Contacto
+const formulario = document.getElementById("formContacto");
+
+formulario.addEventListener("submit", async function (event) {
+
+    event.preventDefault();
+
+    const datos = new FormData(formulario);
+
+    try {
+
+        const respuesta = await fetch("/contacto", {
+            method: "POST",
+            body: datos
+        });
+
+        const resultado = await respuesta.text();
+
+        if (respuesta.ok) {
+
+            alert(resultado);
+
+            window.location.href = "/";
+
+        } else {
+
+            alert("Ocurrió un error al enviar el mensaje.");
+
+        }
+
+    } catch (error) {
+
+        console.error("Error:", error);
+
+        alert("No se pudo enviar el mensaje. Inténtalo nuevamente.");
+
+    }
+
+});

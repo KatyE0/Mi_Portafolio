@@ -4,7 +4,7 @@
     --bg-pink: #271327;
     --btn-color: #dfbbdd2e;
     --text: #F5F5F7;
-    --pink-bg: url("/sources/pink-bg.jpg");
+    --pink-bg: url("{{ url_for('static', filename='/sources/pink-bg.jpg') }}");
 
 }
 
