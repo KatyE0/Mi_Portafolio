@@ -1,4 +1,13 @@
+# Variables de entorno
 .env
+.env.local
+
+# Vercel
+.vercel/
+
+# Entorno virtual de Python
 venv/
+
+# Python
 __pycache__/
 *.pyc
